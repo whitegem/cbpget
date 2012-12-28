@@ -22,6 +22,3 @@ require_once(WEB_ROOT . 'mysql.php');
 require_once(WEB_ROOT . 'session.php');
 require_once(WEB_ROOT . 'main.php');
 require_once(WEB_ROOT . 'cookie.php');
-
-$conf = Config::getInstance();
-var_dump($conf(''));

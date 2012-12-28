@@ -22,15 +22,18 @@ Cookie:
   Prefix: gFh_ # Random prefix is preferred
 
 URI:
-  -
-    Pattern: '/list'
-    Backend: 'website.home'
-  -
-    Pattern: '/user/([0-9A-Za-z_\-]+)'
-    Backend: 'website.user'
-  -
-    Pattern: '/status'
-    Backend: 'status'
-  -
-    Pattern: '/admin'
-    Backend: 'website.admin'
+  Rules:
+    -
+      Pattern: '/list'
+      Backend: 'website.home'
+    -
+      Pattern: '/user/([0-9A-Za-z_\-]+)'
+      Backend: 'website.user'
+    -
+      Pattern: '/status'
+      Backend: 'status'
+    -
+      Pattern: '/admin'
+      Backend: 'website.admin'
+  Prefix: ''
+  Default: 'Main.NotMatched'
