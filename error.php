@@ -13,10 +13,9 @@ class Error {
 	const ERROR = 4;
 	const NONE = 5;
 
-	//private static $reportlevel = self::NOTICE;
-	private static $reportlevel = self::DEBUG;
-	//private static $level = self::WARNING;
-	private static $level = self::DEBUG;
+	private static $reportlevel = self::NOTICE;
+	private static $level = self::ERROR;
+	//private static $level = self::DEBUG;
 	private static $debuginfo = array();
 	// Warning: The error equal or higher than $level will stop the execution, and display the error.
 

@@ -1,0 +1,36 @@
+System:
+  Name: 'CB Plugin List'
+  Version: '0.1 Alpha'
+
+MySQL:
+  Host: 'localhost'
+  User: 'root'
+  Pass: 'meiyoumima'
+  Database: 'test'
+  Charset: 'utf8'
+
+Template:
+  Compiled: '{?WEB_ROOT}tmp/compiled/'
+  Cached: '{?WEB_ROOT}tmp/cached/'
+
+Session:
+  Expire: 60 # In minutes.
+  Prefix: aDx_ # Random prefix is preferred
+
+Cookie:
+  Expire: 60 # In minutes, better be same with session.
+  Prefix: gFh_ # Random prefix is preferred
+
+URI:
+  -
+    Pattern: '/list'
+    Backend: 'website.home'
+  -
+    Pattern: '/user/([0-9A-Za-z_\-]+)'
+    Backend: 'website.user'
+  -
+    Pattern: '/status'
+    Backend: 'status'
+  -
+    Pattern: '/admin'
+    Backend: 'website.admin'
